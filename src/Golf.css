@@ -1,0 +1,48 @@
+.bg{
+    width: 421.7px;
+    height: 413.4px;
+    border-radius: 5.5px;
+    margin-left: 35%;
+    background-color: #ffffff;
+  }
+
+.fieldoutline{
+    width: 209px;
+    height: 55.1px;
+    border-radius: 2.2px;
+    background-color: #e5e9ed;
+    border: solid 0.6px rgba(208, 208, 208, 0.5);
+    font-family: 'Lato';
+    font-size: 15.4px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #787e8c;
+  }
+
+.button_bg{
+     margin-top: 36px;
+     width: 212.2px;
+     height: 53.8px;
+     border-radius: 2.2px;
+     background-color:rgb(51, 87, 153);
+     font-family: 'Open Sans';
+     font-size: 16.5px;
+     font-weight: 300;
+     font-style: normal;
+     font-stretch: normal;
+     line-height: normal;
+     letter-spacing: 1.1px;
+     text-align: left;
+     color: #ffffff;
+     margin-left: 25%;
+  }
+
+.error{
+     color:rgb(255, 174, 0);
+     padding: 2px;
+     margin-top:20px;
+}

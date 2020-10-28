@@ -18,33 +18,33 @@ class Golf extends Component {
     handlePar(e){
         this.setState({ [e.target.name]: e.target.value});
     }
-    handleSubmit=(stroke,par)=>{
-        var res,msg;
-        this.state.stroke=Math.abs(stroke);
-        this.state.par=Math.abs(par);
+    handleSubmit(stroke,par){
+        var res;
         res=this.state.par-this.state.stroke;
-             if(!this.state.stroke && !this.state.par)
-                this.setState({msg:"Please enter stroke and par"})
-             else if(!this.state.stroke && !this.state.par)
-                this.setState({msg:"Please enter stroke and par"})
-             else if(!this.state.stroke && this.state.par)
-                this.setState({msg:"Please enter stroke"})
-             else if(this.state.stroke && !this.state.par)
-                this.setState({msg:"Please enter par"})
-             else if(this.state.par== 1)
-                this.setState({msg:"Hole-in-one!"})
-             else if(res<= -2) 
-                this.setState({msg:"Eagle"})
-             else if(res== -1)
-                this.setState({msg:"Birdie"})
-             else if(res==0)
-                this.setState({msg:"Par"})
-             else if(res==1)
-                this.setState({msg:"Bogey"})
-             else if (res==2)
-                this.setState({msg:"Double Bogey"})
-             else if(res>=3)
-                this.setState({msg:"Go Home!"})
+        if(!this.state.stroke && !this.state.par)
+            this.setState({msg:"Please enter stroke and par"})
+        else if(this.state.stroke<0 || this.state.par<0)
+            this.setState({msg:"Please enter valid stroke and par"})
+        else if(this.state.stroke>15)
+            this.setState({msg:"Please enter valid stroke"})
+        else if(!this.state.stroke && this.state.par)
+            this.setState({msg:"Please enter stroke"})
+        else if(this.state.stroke && !this.state.par)
+            this.setState({msg:"Please enter par"})
+        else if(this.state.par== 1)
+            this.setState({msg:"Hole-in-one!"})
+        else if(res<= -2) 
+            this.setState({msg:"Eagle"})
+        else if(res== -1)
+            this.setState({msg:"Birdie"})
+        else if(res==0)
+            this.setState({msg:"Par"})
+        else if(res==1)
+            this.setState({msg:"Bogey"})
+        else if (res==2)
+            this.setState({msg:"Double Bogey"})
+        else if(res>=3)
+            this.setState({msg:"Go Home!"})
 }
     render() {
         return (
